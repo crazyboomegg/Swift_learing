@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "license-README-FIRST.txt",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
