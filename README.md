@@ -13,7 +13,7 @@ App。
 ![AdaptiveUIDemo](Gif/AdaptiveUIDemo.gif)
 <br/><br/>
 
-## [02 - IndexedTable]
+## 02 - [IndexedTable]
 表格視圖製作索引列表
 - 可以在標準表格視圖中顯⽰⼀系列的動物清單
 - 除了列出所有動物外，這個 App 將動物群組起來至不同區塊，並顯⽰⼀個可以快速存取的索引列表。
@@ -21,7 +21,7 @@ App。
 ![IndexedTable](Gif/IndexedTable.gif)
 <br/><br/>
 
-## [03 - TableCellAnimation]
+## 03 - [TableCellAnimation]
 為表格視圖 cell 加入簡單的淡入動畫讓 App 更⽣動活潑
 - 淡入動畫
 - 使用 CATransform3D 建立旋轉特效
@@ -30,7 +30,7 @@ App。
 ![TableCellAnimation](Gif/TableCellAnimation.gif)
 <br/><br/>
 
-## [04 - KivaLoan]
+## 04 - [KivaLoan]
 呼叫Kiva API 來取得最近的融資貸款，並以表格視圖來做呈現
 
 - 建⽴ JSON 資料模型
@@ -41,6 +41,15 @@ App。
 ![KivaLoan](Gif/KivaLoan.gif)
 <br/><br/>
 
-## [05 - EmailAttachment]
+## 05 - [EmailAttachment]
 - 以內建的API，在App中整合email編輯器，撰寫⼀個簡單的 App 來⽰範如何傳送
 email 與如何加入 email 附加檔案。
+
+![EmailAttachment](Gif/EmailAttachment.gif)
+<br/><br/>
+
+## 06 - [SocialSharing]
+- 這個 App 可以讓使⽤者滑動⼀個 cell 並且按下分享（ Share） 按鈕，App可以在 Facebook動態牆和現實動態分享所選擇的餐廳。
+
+![SocialSharing](Gif/SocialSharing.gif)
+<br/><br/>
