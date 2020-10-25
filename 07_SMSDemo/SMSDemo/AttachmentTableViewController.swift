@@ -43,14 +43,27 @@ extension AttachmentTableViewController: MFMessageComposeViewControllerDelegate 
             present(alertMessage, animated: true, completion: nil)
             return
         }
+        if let messageUrl = URL(string: "sms:123456789&body=Hello") {
+            UIApplication.shared.open(messageUrl, options: [:], completionHandler: nil)
+        }
+        
+        
+        let fileparts = attachment.components(separatedBy: ".")
+        let filename = fileparts[0]
+        let fileExtension = fileparts[1]
+        let filePath = Bundle.main.path(forResource: filename, ofType: fileExtension)
+        let fileUrl = NSURL.fileURL(withPath: filePath!)
+        
         
         let messageController = MFMessageComposeViewController()
         messageController.messageComposeDelegate = self
         messageController.recipients = ["12345678", "72345524"]
         messageController.body = "Just sent the \(attachment) to your email. Please check!"
-        
+        messageController.addAttachmentURL(fileUrl, withAlternateFilename: nil)
         present(messageController, animated: true, completion: nil)
     }
+   
+   
     
 
 }
@@ -94,4 +107,6 @@ class AttachmentTableViewController: UITableViewController {
     }
  
 
+    
+    
 }
