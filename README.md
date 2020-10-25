@@ -44,3 +44,6 @@ App。
 ## [05 - EmailAttachment]
 - 以內建的API，在App中整合email編輯器，撰寫⼀個簡單的 App 來⽰範如何傳送
 email 與如何加入 email 附加檔案。
+
+![EmailAttachment](Gif/EmailAttachment.gif)
+<br/><br/>
