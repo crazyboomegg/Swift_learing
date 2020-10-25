@@ -1,6 +1,10 @@
 # My Swift-Learing Project
 
 :::success
+耶 :tada:
+:::
+
+:::success
 ## 01 - [AdaptiveUI]:tada:
 :::
 - 主要使⽤ Storyboard 來進⾏使⽤者介⾯元件的佈局，不需要撰寫程式碼，
