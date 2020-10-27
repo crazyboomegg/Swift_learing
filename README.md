@@ -49,7 +49,13 @@ email 與如何加入 email 附加檔案。
 <br/><br/>
 
 ## 06 - [SocialSharing]
-- 這個 App 可以讓使⽤者滑動⼀個 cell 並且按下分享（ Share） 按鈕，App可以在 Facebook動態牆和現實動態分享所選擇的餐廳。
+- 使⽤者滑動⼀個 cell 並且按下分享（ Share） 按鈕，整合Facebook所提供的SDK，使App可以在刊登訊息在 Facebook動態牆和現實動態，實作分享功能。
 
-![SocialSharing](Gif/SocialSharing.gif)
+![SocialSharingDemo](Gif/SocialSharingDemo.gif)
+<br/><br/>
+
+## 07 - [SMSDemo]
+- 使⽤ MessageUI 框架進⾏簡訊（SMS）與媒體簡訊（MMS）傳送
+
+![SMSDemo](Gif/SMSDemo.gif)
 <br/><br/>
