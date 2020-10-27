@@ -10,34 +10,37 @@ import UIKit
 import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
-    
-    var currentRoute: MKRoute?
-    var currentPlacemark: CLPlacemark?
-    let locationManager = CLLocationManager()
-    
-    var currentTransportType = MKDirectionsTransportType.automobile
-    
+
+    @IBOutlet var mapView: MKMapView!
     @IBOutlet var segmentedControl: UISegmentedControl!
     
     
-    @IBOutlet var mapView: MKMapView!
+    var restaurant: Restaurant!
     
-    var restaurant:Restaurant!
+    let locationManager = CLLocationManager()
+    var currentPlacemark: CLPlacemark?
+    
+    var currentTransportType = MKDirectionsTransportType.automobile
+    var currentRoute: MKRoute?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Show the current user's location
+        mapView.showsUserLocation = true
+        
+        // Hide the segmented control by default and register the event
+        segmentedControl.isHidden = true
         segmentedControl.addTarget(self, action: #selector(showDirection), for: .valueChanged)
         
+        // Request for a user's authorization for location services
         locationManager.requestWhenInUseAuthorization()
         let status = CLLocationManager.authorizationStatus()
         
         if status == CLAuthorizationStatus.authorizedWhenInUse {
             mapView.showsUserLocation = true
         }
-                
-        mapView.showsUserLocation = true
-            
+        
         // Convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(restaurant.location, completionHandler: { placemarks, error in
@@ -64,6 +67,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     self.mapView.selectAnnotation(annotation, animated: true)
                 }
             }
+            
         })
         
         mapView.delegate = self
@@ -72,9 +76,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             mapView.showsScale = true
             mapView.showsTraffic = true
         }
-        
-        segmentedControl.isHidden = true
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,7 +85,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     // MARK: - MKMapViewDelegate methods
     
-
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let identifier = "MyPin"
         
@@ -117,16 +117,15 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 pinAnnotationView?.canShowCallout = true
                 pinAnnotationView?.pinTintColor = UIColor.orange
             }
-            
+
             annotationView = pinAnnotationView
         }
         
         let leftIconView = UIImageView(frame: CGRect.init(x: 0, y: 0, width: 53, height: 53))
         leftIconView.image = UIImage(named: restaurant.image)
         annotationView?.leftCalloutAccessoryView = leftIconView
-        
         annotationView?.rightCalloutAccessoryView = UIButton(type: UIButton.ButtonType.detailDisclosure)
-            
+    
         return annotationView
     }
     
@@ -143,17 +142,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         performSegue(withIdentifier: "showSteps", sender: view)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showSteps" {
-            let routeTableViewController = segue.destination.children[0] as! RouteTableTableViewController
-            if let steps = currentRoute?.steps {
-                routeTableViewController.routeSteps = steps
-            }
-        }
-    }
     
+    // MARK: - Action methods
     
     @IBAction func showDirection(sender: UIButton) {
+        guard let currentPlacemark = currentPlacemark else {
+            return
+        }
         
         switch segmentedControl.selectedSegmentIndex {
         case 0: currentTransportType = .automobile
@@ -163,41 +158,85 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         segmentedControl.isHidden = false
         
-        guard let currentPlacemark = currentPlacemark else {
-            return
-        }
-        
         let directionRequest = MKDirections.Request()
         
+        // Set the source and destination of the route
         directionRequest.source = MKMapItem.forCurrentLocation()
         let destinationPlacemark = MKPlacemark(placemark: currentPlacemark)
         directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
         directionRequest.transportType = currentTransportType
         
+        // Calculate the direction
         let directions = MKDirections(request: directionRequest)
         
-        directions.calculate { (routeResponse, routeError)  -> Void in
+        directions.calculate { (routeResponse, routeError) -> Void in
             
-            
-        
-        guard let routeResponse = routeResponse else {
-            if let routeError = routeError {
-                print("Error: \(routeError)")
+            guard let routeResponse = routeResponse else {
+                if let routeError = routeError {
+                    print("Error: \(routeError)")
+                }
+                
+                return
             }
-            return
-        }
-        let route = routeResponse.routes[0]
+            
+            let route = routeResponse.routes[0]
             self.currentRoute = route
             self.mapView.removeOverlays(self.mapView.overlays)
             self.mapView.addOverlay(route.polyline, level: MKOverlayLevel.aboveRoads)
             
             let rect = route.polyline.boundingMapRect
-            self.mapView.setRegion(MKCoordinateRegion(rect), animated: true)
-           
-    }
+            self.mapView.setRegion(MKCoordinateRegion.init(rect), animated: true)
+        }
         
-}
-  
+        
+    }
     
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "showSteps" {
+            let routeTableViewController = segue.destination.children[0] as! RouteTableViewController
+            if let steps = currentRoute?.steps {
+                routeTableViewController.routeSteps = steps
+            }
+        }
+    }
+    
+    @IBAction func unwindToMap(segue: UIStoryboardSegue) {
+        
+    }
+    
+    @IBAction func showNearby(sender: UIButton) {
+        let searchRequest = MKLocalSearch.Request()
+        searchRequest.naturalLanguageQuery = restaurant.type
+        searchRequest.region = mapView.region
+        
+        let localSearch = MKLocalSearch(request: searchRequest)
+        localSearch.start { (response, error) -> Void in
+            guard let response = response else {
+                if let error = error {
+                    print(error)
+                }
+                return
+            }
+            
+            let mapItems = response.mapItems
+            var nearbyAnnotations: [MKAnnotation] = []
+            if mapItems.count > 0 {
+                for item in mapItems {
+                    let annotation = MKPointAnnotation()
+                    annotation.title = item.name
+                    annotation.subtitle = item.phoneNumber
+                    if let location = item.placemark.location {
+                        annotation.coordinate = location.coordinate
+                    }
+                    nearbyAnnotations.append(annotation)
+                }
+            }
+            self.mapView.showAnnotations(nearbyAnnotations, animated: true)
+        }
+    }
     
 }

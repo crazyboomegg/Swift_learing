@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7D41431025479398008C128A /* RouteTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D41430F25479398008C128A /* RouteTableTableViewController.swift */; };
 		F44247821DA6439300F3F437 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44247811DA6439300F3F437 /* AppDelegate.swift */; };
 		F44247871DA6439300F3F437 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F44247851DA6439300F3F437 /* Main.storyboard */; };
 		F44247891DA6439300F3F437 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F44247881DA6439300F3F437 /* Assets.xcassets */; };
@@ -16,10 +15,10 @@
 		F44247961DA6465600F3F437 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44247951DA6465600F3F437 /* MapViewController.swift */; };
 		F44247981DA6471000F3F437 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44247971DA6471000F3F437 /* Restaurant.swift */; };
 		F442479B1DA6489E00F3F437 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F442479A1DA6489E00F3F437 /* MapKit.framework */; };
+		F4EB68411FB422D4008D5A4E /* RouteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EB68401FB422D4008D5A4E /* RouteTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7D41430F25479398008C128A /* RouteTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableTableViewController.swift; sourceTree = "<group>"; };
 		F442477E1DA6439300F3F437 /* MapKitDirection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitDirection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44247811DA6439300F3F437 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F44247861DA6439300F3F437 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		F44247951DA6465600F3F437 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F44247971DA6471000F3F437 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		F442479A1DA6489E00F3F437 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F4EB68401FB422D4008D5A4E /* RouteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 				F44247931DA6462E00F3F437 /* RestaurantTableViewController.swift */,
 				F44247951DA6465600F3F437 /* MapViewController.swift */,
 				F44247971DA6471000F3F437 /* Restaurant.swift */,
-				7D41430F25479398008C128A /* RouteTableTableViewController.swift */,
+				F4EB68401FB422D4008D5A4E /* RouteTableViewController.swift */,
 			);
 			path = MapKitDirection;
 			sourceTree = "<group>";
@@ -112,12 +112,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = AppCoda;
 				TargetAttributes = {
 					F442477D1DA6439300F3F437 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 3CCWF8D47P;
 						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -164,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D41431025479398008C128A /* RouteTableTableViewController.swift in Sources */,
+				F4EB68411FB422D4008D5A4E /* RouteTableViewController.swift in Sources */,
 				F44247941DA6462E00F3F437 /* RestaurantTableViewController.swift in Sources */,
 				F44247981DA6471000F3F437 /* Restaurant.swift in Sources */,
 				F44247961DA6465600F3F437 /* MapViewController.swift in Sources */,
@@ -219,7 +218,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -245,7 +243,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -280,7 +278,6 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -300,7 +297,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -313,9 +310,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CCWF8D47P;
 				INFOPLIST_FILE = MapKitDirection/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.MapKitDirection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -328,9 +324,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3CCWF8D47P;
 				INFOPLIST_FILE = MapKitDirection/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.MapKitDirection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
