@@ -59,3 +59,14 @@ email 與如何加入 email 附加檔案。
 
 ![SMSDemo](Gif/SMSDemo.gif)
 <br/><br/>
+
+## 08 - [MapKitDirection]
+使⽤ MKDirections API，依照你預設的交通型態，取得駕駛與步⾏⽅向。 MKDirections 也會另外提供替代道路資訊。
+- 取得⽬前使⽤者的位置
+- 計算路徑並將它畫在地圖上
+- 使⽤分段控制
+- 取得路徑步驟並顯⽰開⾞/步⾏路徑的導引
+
+![MapKitDirection](Gif/MapKitDirection.gif)
+<br/><br/>
+
