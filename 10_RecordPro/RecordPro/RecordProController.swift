@@ -9,10 +9,6 @@
 import UIKit
 import AVFoundation
 
-//extension RecordProController: AVAudioRecorderDelegate {
-//    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfullyflag: Bool)
-//}
-
 
 
 class RecordProController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
