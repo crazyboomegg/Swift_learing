@@ -77,3 +77,11 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![LocalSearch](Gif/LocalSearch.gif)
 <br/><br/>
+
+## 10 - [RecordPro]
+使用 AV Foundation 框架中的兩個類別，製作一個錄音加上播放的APP。
+- AVAudioPlayer – 把它想成是⼀個⾳訊播放器，⽤來播放聲⾳檔。
+- AVAudioRecorder – ⼀個錄製⾳訊的⾳訊錄製器
+
+![RecordPro](Gif/RecordPro.gif)
+<br/><br/>
