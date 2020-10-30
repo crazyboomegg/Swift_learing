@@ -85,3 +85,9 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![RecordPro](Gif/RecordPro.gif)
 <br/><br/>
+
+## 11 - [QRCodeReader]
+使用 AVFoundation 框架，偵測 QR Code 並進行資訊解碼，運用URL Scheme連結網站。
+
+![QRCodeReader](Gif/QRCodeReader.gif)
+<br/><br/>
