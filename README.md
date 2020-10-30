@@ -70,3 +70,10 @@ email 與如何加入 email 附加檔案。
 ![MapKitDirection](Gif/MapKitDirection.gif)
 <br/><br/>
 
+## 09 - [LocalSearch]
+MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
+地圖上呈現。並且可以執⾏位置的搜尋，可以是名字、地址、或者
+類型，例如咖啡或比薩。
+
+![LocalSearch](Gif/LocalSearch.gif)
+<br/><br/>
