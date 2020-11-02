@@ -1,15 +1,6 @@
 # My Swift-Learing Project
 
 
-![Search](Gif/Search.gif)
-<br/><br/>
-
-
-
-
-
-
-
 
 
 ## 01 - [AdaptiveUI]
