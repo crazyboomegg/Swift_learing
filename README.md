@@ -1,5 +1,23 @@
 # My Swift-Learing Project
 
+## 00 - [SearchFlickrPhotos]
+
+第一頁
+- 第一個是搜尋文字的輸入匡(Text)
+- 第二個是每頁要呈現的數量的輸入匡(Per Page)
+- 此兩個輸入匡都要填寫,button 才可以點擊
+- 不可點擊的 button 和可點擊的 button 用不同顏色區別
+- 點擊button會轉跳(push)到第二頁(搜尋結果頁)
+
+第二頁 (搜尋結果頁)
+- 顯示Flickr回傳的API結果,
+- Cell 會顯示圖片(photo),與標題,Cell為正方形
+
+
+![FlickrSearch](Gif/FlickrSearch.gif)
+<br/><br/>
+
+
 
 
 
