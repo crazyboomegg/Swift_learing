@@ -71,14 +71,14 @@ class KivaLoanTableViewController: UITableViewController {
             }
             
             if let data = data {
-                self.loans = self.parseJsonData(data: data)
                 
+                self.loans = self.parseJsonData(data: data)
+                print("Wow", self.loans)
                 OperationQueue.main.addOperation({
                     self.tableView.reloadData()
                 })
                 
             }
-            
         })
         
         task.resume()
