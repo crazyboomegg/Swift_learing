@@ -37,20 +37,20 @@
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="rZM-E1-c6K" id="LPW-J2-SuD"/>
-                        <segue destination="8bl-Vq-S6M" kind="presentation" identifier="playVideo" id="1Oe-Cq-eX0"/>
+                        <segue destination="L3z-ia-FVZ" kind="presentation" identifier="playVideo" id="094-H5-Ch9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-217" y="102"/>
+            <point key="canvasLocation" x="22" y="102"/>
         </scene>
         <!--AV Player View Controller-->
-        <scene sceneID="HQt-ma-r4e">
+        <scene sceneID="ryK-8v-eGc">
             <objects>
-                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="8bl-Vq-S6M" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBe-AV-F5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="L3z-ia-FVZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3g-b8-sb3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="582" y="116"/>
+            <point key="canvasLocation" x="908" y="98"/>
         </scene>
     </scenes>
     <resources>
