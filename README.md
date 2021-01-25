@@ -171,3 +171,13 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![QRCodeReader](Gif/19.gif)
 <br/><br/>
+
+## 20 - [SidebarMenu]
+應⽤ SWRevealViewController 建⽴⼀個滑動導覽選單
+- 按下了導覽列上左上角的選單按鈕後，觸發了選單
+- ⼿指向內容區右邊滑動來帶出選單
+- 選單出現後，使⽤者可以再次按下左上角的選單按鈕關掉它
+- 可在內容區上，往左拖曳來關掉選單
+
+![QRCodeReader](Gif/20.gif)
+<br/><br/>
