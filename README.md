@@ -121,3 +121,9 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![RecordPro](Gif/12.gif)
 <br/><br/>
+
+## 13 - [SimpleVideoCam]
+使⽤ AVFoundation 框架，經由變更 AVCaptureSession 的輸入與輸出,錄製影片並用 AVKit 播放影音檔。
+
+![QRCodeReader](Gif/13.gif)
+<br/><br/>
