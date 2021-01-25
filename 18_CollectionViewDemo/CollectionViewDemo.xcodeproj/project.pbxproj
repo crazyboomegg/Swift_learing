@@ -76,8 +76,8 @@
 				F44C8E2A1FC476A80089650D /* Assets.xcassets */,
 				F44C8E2C1FC476A80089650D /* LaunchScreen.storyboard */,
 				F44C8E2F1FC476A80089650D /* Info.plist */,
-				F44C8E351FC529070089650D /* IconCollectionViewCell.swift */,
 				F44C8E371FC529170089650D /* IconCollectionViewController.swift */,
+				F44C8E351FC529070089650D /* IconCollectionViewCell.swift */,
 				F44C8E391FC52C100089650D /* Icon.swift */,
 				7D9C718F259ABA4600F137DA /* IconDetailViewController.swift */,
 			);
@@ -304,6 +304,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CCWF8D47P;
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.CollectionViewDemo;
@@ -318,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CCWF8D47P;
 				INFOPLIST_FILE = CollectionViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.CollectionViewDemo;

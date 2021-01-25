@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SimpleCameraController: UIViewController, AVCapturePhotoCaptureDelegate {
+class SimpleCameraController: UIViewController {
 
     let captureSession = AVCaptureSession()
     
@@ -75,6 +75,7 @@ class SimpleCameraController: UIViewController, AVCapturePhotoCaptureDelegate {
         
         currentDevice = backFacingCamera
         
+
         guard let captureDeviceInput = try? AVCaptureDeviceInput(device: currentDevice) else {
             return
         }
@@ -135,25 +136,6 @@ class SimpleCameraController: UIViewController, AVCapturePhotoCaptureDelegate {
             }
         }
     }
-    
-    
-    
-    
-    
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        guard error == nil else {
-            return
-        }
-        
-        guard let imageData = photo.fileDataRepresentation() else {
-            return
-        }
-        
-        stillImage = UIImage(data: imageData)
-        performSegue(withIdentifier: "showPhoto", sender: self)
-        
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showPhoto" {
             let photoViewController = segue.destination as! PhotoViewController
@@ -191,3 +173,20 @@ class SimpleCameraController: UIViewController, AVCapturePhotoCaptureDelegate {
     
     
 }
+
+extension SimpleCameraController: AVCapturePhotoCaptureDelegate {
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        guard error == nil else {
+            return
+        }
+        
+        // Get the image from the photo buffer
+        guard let imageData = photo.fileDataRepresentation() else {
+            return
+        }
+        
+        stillImage = UIImage(data: imageData)
+        performSegue(withIdentifier: "showPhoto", sender: self)
+    }
+}
+

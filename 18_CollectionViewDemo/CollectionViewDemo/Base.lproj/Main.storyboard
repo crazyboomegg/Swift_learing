@@ -67,7 +67,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Icon Store" id="dYl-0T-CfV">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="Pqi-zM-DXA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="Pqi-zM-DXA">
+                            <connections>
+                                <action selector="shareButtonTappedWithSender:" destination="y6f-Up-Mcv" id="4Ez-Nr-ROe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="shareButton" destination="Pqi-zM-DXA" id="uIe-Hb-zJo"/>
@@ -107,7 +111,7 @@
                                     <constraint firstAttribute="width" constant="30" id="FAl-3w-fc2"/>
                                     <constraint firstAttribute="height" constant="30" id="Kks-eU-QLX"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="book.closed" catalog="system"/>
+                                <state key="normal" title="Button" image="close"/>
                                 <connections>
                                     <segue destination="nAl-0g-dkC" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="fYz-4m-jFg"/>
                                 </connections>
@@ -185,7 +189,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book.closed" catalog="system" width="115" height="128"/>
+        <image name="close" width="101" height="101"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

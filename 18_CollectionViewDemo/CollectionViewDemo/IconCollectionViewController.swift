@@ -34,7 +34,26 @@ class IconCollectionViewController: UICollectionViewController {
             return
         }
         
+        let snapshots = selectedIcons.map { $0.snapshot }
         
+        let activityController = UIActivityViewController(activityItems: snapshots, applicationActivities: nil)
+        
+        activityController.completionWithItemsHandler = { (activityType, completed, returnedItem, error) in
+            if let indexPaths = self.collectionView?.indexPathsForSelectedItems {
+                for indexPath in indexPaths {
+                    self.collectionView?.deselectItem(at: indexPath, animated: false)
+                }
+            }
+            
+            self.selectedIcons.removeAll(keepingCapacity: true)
+            
+            self.shareEnabled = false
+            self.collectionView?.allowsMultipleSelection = false
+            self.shareButton.title = "Share"
+            self.shareButton.style = UIBarButtonItem.Style.plain
+         }
+        
+        present(activityController, animated: true, completion: nil)
         
     }
 
@@ -148,6 +167,17 @@ class IconCollectionViewController: UICollectionViewController {
         return true
     }
     
+    
+    func fileToURL(file: String) -> URL? {
+        
+        if let resourcePath = Bundle.main.resourcePath {
+            let path = resourcePath + "/" + file + ".png"
+            print("File path: \(path)")
+            return URL(fileURLWithPath: path)
+        }
+        
+        return nil
+    }
     
     
 }
