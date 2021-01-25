@@ -138,3 +138,30 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![QRCodeReader](Gif/15.gif)
 <br/><br/>
+
+## 16 - [AirDropDemo]
+使⽤ UIActivityViewController 透過 AirDrop 來分享圖片與檔案。
+資料型態包括 
+- String 
+- UIImage 
+- URL
+
+![QRCodeReader](Gif/16.gif)
+<br/><br/>
+
+## 17 - [CollectionViewDemo]
+建⽴⼀個簡單的 App，以網格佈局⽅式來顯⽰圖⽰集
+- 使⽤ UICollectionView 來建構⼀個簡單的網格佈局
+- 集合視圖 Cell 背景的客製化
+
+![QRCodeReader](Gif/17.gif)
+<br/><br/>
+
+## 18 - [CollectionViewDemo2]
+
+- 按下圖⽰時，App 會帶出⼀個強制回應（Modal）視圖，並將圖⽰以較
+⼤的尺⼨來顯⽰。
+- 使⽤者可以選擇多張圖⽰，並使⽤動態視圖控制器來進⾏分享。
+
+![QRCodeReader](Gif/18.gif)
+<br/><br/>
