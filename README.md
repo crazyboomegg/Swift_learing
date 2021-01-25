@@ -109,3 +109,15 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![QRCodeReader](Gif/QRCodeReader.gif)
 <br/><br/>
+
+## 12 - [SimpleCamera]
+使⽤ AVFoundation 框架來擷取靜態圖像
+- 使⽤ AVFoundation 框架來建⽴相機介⾯
+- 使⽤前鏡頭與後鏡頭相機來擷取靜態圖像
+- iOS 13 App 程式設計進階攻略 | AppCoda出版 211
+- 使⽤⼿勢辨識器來偵測滑動（swipe）⼿勢
+- 為相機 App 加入縮放功能
+- 儲存圖⽚至照⽚膠卷
+
+![RecordPro](Gif/12.gif)
+<br/><br/>
