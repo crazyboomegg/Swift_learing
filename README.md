@@ -127,3 +127,14 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![QRCodeReader](Gif/13.gif)
 <br/><br/>
+
+## 14 - [GoogleAdDemo]
+使⽤Google AdMob來播放橫幅廣告
+-使用 CocoaPods 安裝 Google Mobile Ads SDK 製作表格視圖標題顯示橫幅廣告與播放插播廣告。
+
+
+## 15 - [CustomFont]
+使用程式自訂字型，可以再設定中調整字體大小
+
+![QRCodeReader](Gif/15.gif)
+<br/><br/>
