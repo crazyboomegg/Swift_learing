@@ -181,3 +181,39 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![QRCodeReader](Gif/20.gif)
 <br/><br/>
+
+## 21 - [NavTransition]
+視圖控制器轉場以及動畫
+
+![QRCodeReader](Gif/21.gif)
+<br/><br/>
+
+## 22 - [SlideDownMenu]
+實作下拉式的選單以及動畫。
+
+![QRCodeReader](Gif/22.gif)
+<br/><br/>
+
+## 23 - [SelfSizingCell]
+Cell 尺⼨⾃適應與動態型態
+- 針對 Prototype cell 定義 Auto Layout 約束條件
+- 指定表格視圖的 estimatedRowHeight 屬性
+- 設定表格視圖的 rowHeight 屬性為 UITableViewAutomaticDimensio
+- 可在設定中調整字體大小
+
+![QRCodeReader](Gif/23.gif)
+<br/><br/>
+
+## 24 - [SimpleRSSReader]
+XML 解析、 RSS與表格視圖 Cell 的展開
+- 使用 XMLParser 解析讀取 XML 檔 製作一個 RSS 閱讀器應用，與製作表格視圖 Cell 的展開。
+
+![QRCodeReader](Gif/24.gif)
+<br/><br/>
+
+## 25 - [VisualEffect]
+使⽤ UIVisualEffect 來產⽣模糊背景
+- 了解 UIVisualEffect 與 UIVisualEffectView
+
+![QRCodeReader](Gif/25.gif)
+<br/><br/>
