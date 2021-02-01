@@ -109,3 +109,111 @@ MKLocalSearch API 可以讓使用者搜尋同性質的地方，並且在
 
 ![QRCodeReader](Gif/QRCodeReader.gif)
 <br/><br/>
+
+## 12 - [SimpleCamera]
+使⽤ AVFoundation 框架來擷取靜態圖像
+- 使⽤ AVFoundation 框架來建⽴相機介⾯
+- 使⽤前鏡頭與後鏡頭相機來擷取靜態圖像
+- iOS 13 App 程式設計進階攻略 | AppCoda出版 211
+- 使⽤⼿勢辨識器來偵測滑動（swipe）⼿勢
+- 為相機 App 加入縮放功能
+- 儲存圖⽚至照⽚膠卷
+
+![RecordPro](Gif/12.gif)
+<br/><br/>
+
+## 13 - [SimpleVideoCam]
+使⽤ AVFoundation 框架，經由變更 AVCaptureSession 的輸入與輸出,錄製影片並用 AVKit 播放影音檔。
+
+![QRCodeReader](Gif/13.gif)
+<br/><br/>
+
+## 14 - [GoogleAdDemo]
+使⽤Google AdMob來播放橫幅廣告
+-使用 CocoaPods 安裝 Google Mobile Ads SDK 製作表格視圖標題顯示橫幅廣告與播放插播廣告。
+
+
+## 15 - [CustomFont]
+使用程式自訂字型，可以再設定中調整字體大小
+
+![QRCodeReader](Gif/15.gif)
+<br/><br/>
+
+## 16 - [AirDropDemo]
+使⽤ UIActivityViewController 透過 AirDrop 來分享圖片與檔案。
+資料型態包括 
+- String 
+- UIImage 
+- URL
+
+![QRCodeReader](Gif/16.gif)
+<br/><br/>
+
+## 17 - [CollectionViewDemo]
+建⽴⼀個簡單的 App，以網格佈局⽅式來顯⽰圖⽰集
+- 使⽤ UICollectionView 來建構⼀個簡單的網格佈局
+- 集合視圖 Cell 背景的客製化
+
+![QRCodeReader](Gif/17.gif)
+<br/><br/>
+
+## 18 - [CollectionViewDemo2]
+
+- 按下圖⽰時，App 會帶出⼀個強制回應（Modal）視圖，並將圖⽰以較
+⼤的尺⼨來顯⽰。
+- 使⽤者可以選擇多張圖⽰，並使⽤動態視圖控制器來進⾏分享。
+
+![QRCodeReader](Gif/18.gif)
+<br/><br/>
+
+## 19 - [DoodleFun]
+使用 UICollectionView 製作一個簡單且具有畫面自適應的商品清單。
+
+![QRCodeReader](Gif/19.gif)
+<br/><br/>
+
+## 20 - [SidebarMenu]
+應⽤ SWRevealViewController 建⽴⼀個滑動導覽選單
+- 按下了導覽列上左上角的選單按鈕後，觸發了選單
+- ⼿指向內容區右邊滑動來帶出選單
+- 選單出現後，使⽤者可以再次按下左上角的選單按鈕關掉它
+- 可在內容區上，往左拖曳來關掉選單
+
+![QRCodeReader](Gif/20.gif)
+<br/><br/>
+
+## 21 - [NavTransition]
+視圖控制器轉場以及動畫
+
+![QRCodeReader](Gif/21.gif)
+<br/><br/>
+
+## 22 - [SlideDownMenu]
+實作下拉式的選單以及動畫。
+
+![QRCodeReader](Gif/22.gif)
+<br/><br/>
+
+## 23 - [SelfSizingCell]
+Cell 尺⼨⾃適應與動態型態
+- 針對 Prototype cell 定義 Auto Layout 約束條件
+- 指定表格視圖的 estimatedRowHeight 屬性
+- 設定表格視圖的 rowHeight 屬性為 UITableViewAutomaticDimensio
+- 可在設定中調整字體大小
+
+![QRCodeReader](Gif/23.gif)
+<br/><br/>
+
+## 24 - [SimpleRSSReader]
+XML 解析、 RSS與表格視圖 Cell 的展開
+- 使用 XMLParser 解析讀取 XML 檔 製作一個 RSS 閱讀器應用，與製作表格視圖 Cell 的展開。
+
+![QRCodeReader](Gif/24.gif)
+<br/><br/>
+
+## 25 - [VisualEffect]
+使⽤ UIVisualEffect 來產⽣模糊背景
+- 了解 UIVisualEffect 與 UIVisualEffectView
+
+![QRCodeReader](Gif/25.gif)
+<br/><br/>
