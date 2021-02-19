@@ -28,7 +28,7 @@
 App。
 
 
-![IndexedTable](Gif/AdaptiveUIDeo.gif)
+![IndexedTable](Gif/AdaptiveUIDemo.gif)
 <br/><br/>
 
 ## 02 - [IndexedTable]
